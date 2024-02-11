@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#game{
+    width: 500px;
+    /* background-color: aqua; */
+    margin: auto;
+}
+h1{
+    color: red;
+    text-shadow: 0 0 10px rgb(248, 125, 125);
+}
+h2{
+    color: white;
+    text-shadow: 0 0 10px  black;
+}
+h3{
+    color: red;
+    text-shadow: 0 0 10px rgb(248, 125, 125);
+    transition: 1s;
+}
+h3:hover{
+    text-shadow: 0 0 20px red;
+}
+#dice{
+    width:50px;
+    transition: 3s;
+    transition-timing-function: linear;
+    margin:5px;
+}
+#map{
+    width:100%;
+    display: block;
+}
+#kolboko{
+    position: absolute;
+    width: 5%;
+    height: 5%;
+    left: 0;
+    bottom: 0;  
+}
+#lenina{
+    position: absolute;
+    width: 5%;
+    height: 5%;
+    left: 20px;
+    bottom: 0; 
+    border-radius: 20px;
+}
+#gameContainer{
+    position: relative;
+}
+span{
+    /* border: 1px solid green; */
+    color: greenyellow;
+    position: absolute;
+    /* transition: 2s; */
+}
+body{
+    font-family: 'Protest Revolution', sans-serif;
+    overflow: hidden;
+}
