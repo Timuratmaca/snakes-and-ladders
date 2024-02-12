@@ -1,18 +1,36 @@
-let dice=document.getElementById("dice")
-let dicenumber=1
-let degrees=0
+let dice = document.getElementById("dice")
+let dicenumber = 1
+let degrees = 0
+let lenina = document.getElementById("lenina")
+let elsteps=0
+let kolboko = document.getElementById("kolboko")
 
-dice.onclick=function (event) {
+function move() {
+    if (elsteps<10){
+        lenina.style.left=elsteps+"0%"
+    }
+    else {
+        lenina.style.bottom=Math.floor(elsteps/10)+("0%")
+        lenina.style.left=(9-elsteps.toString()[1])*10+"%"
+    }
+}
+
+
+dice.onclick = function (event) {
     event.preventDefault();
-    degrees=degrees+1800
-    dice.style.transform="rotate("+(degrees)+"deg)";
+    degrees = degrees + 1800
+    dice.style.transform = "rotate(" + (degrees) + "deg)";
     console.log(Math.random());
-    let diceinterval=setInterval (function () {
-        dicenumber=Math.floor(Math.random()*6+1);
-        dice.src="dice"+dicenumber+".png"    
-    },200)
+    let diceinterval = setInterval(function () {
+        dicenumber = Math.floor(Math.random() * 6 + 1);
+        dice.src = "dice" + dicenumber + ".png"
+    }, 200)
     setTimeout(() => {
         clearInterval(diceinterval);
+        setInterval(function () {
+            elsteps=elsteps+1
+            move()
+        }, 100)
     }, 3000);
 }
 
