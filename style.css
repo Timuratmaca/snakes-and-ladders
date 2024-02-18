@@ -50,7 +50,7 @@ h3:hover{
     bottom: 0; 
     border-radius: 20px;
     transform: translate(60%,-50%); 
-    
+    transition: 1s;
 }
 #gameContainer{
     position: relative;
@@ -64,4 +64,5 @@ span{
 body{
     font-family: 'Protest Revolution', sans-serif;
     overflow: hidden;
+    /* background-color: ; */
 }
